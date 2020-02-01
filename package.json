@@ -1,0 +1,23 @@
+{
+  "name": "booksearch",
+  "version": "0.0.1",
+  "description": "An API to search for book data by its ISBN provided by NLR",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcw/booksearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vcw/booksearch/issues"
+  },
+  "homepage": "https://github.com/vcw/booksearch#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}
