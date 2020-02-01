@@ -7,6 +7,11 @@ app.listen(PORT, () => {
   console.log(`App is listening on port: ${PORT}`);
 });
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 app.get('/', (req, res) => {
   const isbn = req.query.isbn;
   // const token = 'eyJraWQiOiJwcmltb0V4cGxvcmVQcml2YXRlS2V5LTA3TkxSIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJQcmltbyIsImp0aSI6IiIsImV4cCI6MTU4MDUxOTQzOSwiaWF0IjoxNTgwNDMzMDM5LCJ1c2VyIjoiYW5vbnltb3VzLTAxMzFfMDExMDM5IiwidXNlck5hbWUiOm51bGwsInVzZXJHcm91cCI6IkdVRVNUIiwiYm9yR3JvdXBJZCI6bnVsbCwidWJpZCI6bnVsbCwiaW5zdGl0dXRpb24iOiIwN05MUiIsInZpZXdJbnN0aXR1dGlvbkNvZGUiOiIwN05MUiIsImlwIjoiMTg1LjIxOC4xMDkuNTUiLCJwZHNSZW1vdGVJbnN0IjpudWxsLCJvbkNhbXB1cyI6ImZhbHNlIiwibGFuZ3VhZ2UiOiJydV9SVSIsImF1dGhlbnRpY2F0aW9uUHJvZmlsZSI6IiIsInZpZXdJZCI6IjA3TkxSX1ZVMSIsImlsc0FwaUlkIjpudWxsLCJzYW1sU2Vzc2lvbkluZGV4IjoiIiwiand0QWx0ZXJuYXRpdmVCZWFjb25JbnN0aXR1dGlvbkNvZGUiOiIwN05MUiJ9.xS_Z91I84YtxxFqqtlJtAbEZ3OL89VmeGwQ-EWn1y3R_3EEWUnZtueXd8KjEokAHyssCaUN_cfKL7VbRv4JU8A';
